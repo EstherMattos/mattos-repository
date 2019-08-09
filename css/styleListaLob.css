@@ -1,0 +1,116 @@
+:root{
+    --white-blue:#85CDF5;
+    --dark-blue:#2C5680;
+    --orange:#DEB959;
+    --primary-black:#333333;
+    --gradient: linear-gradient(270deg, #2C5680 0%, #DEB959 100%);
+    --white:#FAFAFA;
+    --font-x: Georgia;
+
+}
+
+.clear:after, .clear:before{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 0 - Header*/
+.header {
+    background-color: var(--white-blue);
+    background-size: cover;
+    padding: 30px 0px;
+    position:relative;
+    
+}
+
+.header.small{
+    padding: 6px 10px;
+    font-size:80%;
+}
+    
+.header a{
+    display: inline-block;
+    font-size: 1.125em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primary-black);
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+.nome{
+    float: left;
+    margin-left: 20px;
+}
+
+.fale{
+    float: right;
+    margin-right: 20px;
+}
+
+.img-logo{
+    display: block;
+    margin: 0 auto;
+}
+
+.nome::after, .fale::after{
+    content: "";
+    display: block;
+    background-color: var(--orange);
+    height: 3px;
+    width: 0;
+    transition: .3s;
+}
+.nome:hover::after, .fale:hover::after{
+    width: 100%;
+    transition: .3s;
+}
+
+/* x - footer*/
+
+.footer{ 
+    background-color: var(--primary-black);
+    background-size: cover;
+    border: 3px var(--gradient);
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} 
+
+.footer div{
+    display: inline-block;
+}
+
+.footer img{
+    float: left;
+    max-width: 200px;
+    max-height: 150px;
+    padding: 20px;
+    margin-left: 100px;
+}
+
+.footer p{
+    margin-top: 20px;
+    color: var(--white);
+    padding: 0px 10px;
+    text-align: left;
+    font-size: 0.75em;
+    margin-bottom: 10px;
+    font-family: Georgia, serif;
+    display: block;
+}    
+
+.footer a{
+    background-color: var(--orange); 
+    color: var(--primary-black);
+    font-size: 0.75em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 7px;
+}
+.footer a:hover{
+    background: var(--dark-blue);
+    color: var(--orange);
+}
